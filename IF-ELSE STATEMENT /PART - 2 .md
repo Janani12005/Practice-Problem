@@ -33,7 +33,7 @@ public static void main(String[]args){
 
 ````
 
-02. Check if a number is perfect or not
+ ## 02. Check if a number is perfect or not
 
 ````java[]
 
