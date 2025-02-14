@@ -1,6 +1,6 @@
 
 
- ## 01.Positive/Negative :
+ ## 01.Positive/Negative 
 
 ````java[]
 
@@ -18,7 +18,7 @@ public class Main{
 }
 ````
 
- ## 02.Odd/Even :
+ ## 02.Odd/Even 
 
 ````java[]
 
@@ -37,7 +37,7 @@ public class Main{
 }
 ````
 
-## 03. The number is divisible by 3 and 5 :
+## 03. The number is divisible by 3 and 5 
 
 ````java[]
 
@@ -55,7 +55,7 @@ public class Main {
 }
 ````
 
-## 04. Largest of three numbers :
+## 04. Largest of three numbers 
 
 ````java[]
 
@@ -80,7 +80,7 @@ public class Main{
     }
 ````
 
-## 05.Check whether a number is a prime number :
+## 05.Check whether a number is a prime number 
 
 ````java[]
 
