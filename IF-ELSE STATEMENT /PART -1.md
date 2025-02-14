@@ -128,7 +128,114 @@ public class Main{
 }
 ````
 
-## 07.
+## 07.Find the greatest of four numbers
+
+````java[]
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        int num1 = 5, num2 = 10, num3 = 3, num4 = 8;
+        int largest;
+
+        if (num1 >= num2 && num1 >= num3 && num1 >= num4) {
+            largest = num1;
+        } else if (num2 >= num1 && num2 >= num3 && num2 >= num4) {
+            largest = num2;
+        } else if (num3 >= num1 && num3 >= num2 && num3 >= num4) {
+            largest = num3;
+        } else {
+            largest = num4;
+        }
+
+        System.out.println(largest + " is the largest number.");
+    }
+}
+````
+
+## 08.Check if a number is a palindrome
+
+````java[]
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        int number = 121; 
+        if (isPalindrome(number)) {
+            System.out.println(number + " is a palindrome.");
+        } else {
+            System.out.println(number + " is not a palindrome.");
+        }
+    }
+
+    public static boolean isPalindrome(int num) {
+        int original = num;
+        int reversed = 0;
+        int remainder;
+
+        // Reverse the digits of the number
+        while (num != 0) {
+            remainder = num % 10;
+            reversed = reversed * 10 + remainder;
+            num /= 10;
+        }
+
+        // Check if the original number is equal to the reversed number
+        return original == reversed;
+    }
+}
+````
+
+## 09.Check whether a character is a vowel or consonant
+
+````java[]
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a character: ");
+        char ch = scanner.next().toLowerCase().charAt(0);
+
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+            System.out.println(ch + " is a vowel.");
+        } else if ((ch >= 'a' && ch <= 'z')) {
+            System.out.println(ch + " is a consonant.");
+        } else {
+            System.out.println("Input is not a valid alphabet.");
+        }
+    }
+}
+````
+
+## 10.Find the smallest of three numbers
+
+````java[]
+
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        int num1 = 5, num2 = 10, num3 = 3;
+        int smallest;
+
+        if (num1 <= num2 && num1 <= num3) {
+            smallest = num1;
+        } else if (num2 <= num1 && num2 <= num3) {
+            smallest = num2;
+        } else {
+            smallest = num3;
+        }
+
+        System.out.println(smallest + " is the smallest number.");
+    }
+}
+
+````
+
+
+
 
 
 
