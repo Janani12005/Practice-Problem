@@ -66,4 +66,117 @@ public class Main {
     }
 }
 ````
+
+## 03. Find the number is Armstrong or not
+
+````java[]
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input number
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+        int originalNumber = number;
+
+        // Count digits
+        int digits = 0;
+        int temp = number;
+        while (temp != 0) {
+            digits++;
+            temp /= 10;
+        }
+
+        // Calculate sum of digits raised to power
+        int sum = 0;
+        temp = number;
+        while (temp != 0) {
+            int digit = temp % 10;
+            sum += Math.pow(digit, digits);
+            temp /= 10;
+        }
+
+        // Check and display result
+        if (sum == originalNumber) {
+            System.out.println(originalNumber + " is an Armstrong number.");
+        } else {
+            System.out.println(originalNumber + " is not an Armstrong number.");
+        }
+
+        scanner.close();
+    }
+}
+
+````
+
+## 04. Calculate the factorial number using recursion
+
+````java[]
+
+import java.util.Scanner;
+
+public class FactorialRecursive {
+
+    // Recursive method to calculate factorial
+    static long factorial(int n) {
+        if (n == 0 || n == 1)
+            return 1;
+        else
+            return n * factorial(n - 1);
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input number
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+
+        // Calculate and print factorial
+        long result = factorial(number);
+        System.out.println("Factorial of " + number + " is: " + result);
+
+        scanner.close();
+    }
+}
+````
+## 05.Check whether the number is Automorphic number
+
+````java[]
+import java.util.Scanner;
+
+public class AutomorphicCheck {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input from user
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+
+        if (isAutomorphic(number)) {
+            System.out.println(number + " is an Automorphic number.");
+        } else {
+            System.out.println(number + " is not an Automorphic number.");
+        }
+
+        scanner.close();
+    }
+
+    // Method to check Automorphic number
+    public static boolean isAutomorphic(int num) {
+        int square = num * num;
+
+        // Convert both numbers to string
+        String numStr = String.valueOf(num);
+        String squareStr = String.valueOf(square);
+
+        // Check if square ends with the number
+        return squareStr.endsWith(numStr);
+    }
+}
+````
+
+
    
