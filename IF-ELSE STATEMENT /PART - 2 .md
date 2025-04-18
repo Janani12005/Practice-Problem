@@ -178,5 +178,138 @@ public class AutomorphicCheck {
 }
 ````
 
+## 06.Find the number is a Fibonacci number
+
+````
+import java.util.*;
+public class fibonacciseries {
+        public static void main(String[] args) {
+            int n = 10; // Number of terms to display
+            int first = 0, second = 1;
+
+            System.out.println("Fibonacci Series up to " + n + " terms:");
+
+            for (int i = 1; i <= n; i++) {
+                System.out.print(first + " ");
+
+                int next = first + second; // Add previous two numbers
+                first = second;            // Shift second to first
+                second = next;             // Shift next to second
+            }
+        }
+    }
+
+````
+
+## 07.Determine the number is perfect square
+
+````java[]
+
+import java.util.Scanner;
+public class perfectsquare {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int num = in.nextInt();
+        double sqrt = Math.sqrt(num);
+        if(sqrt == (int) sqrt) {
+            System.out.println(num + " is a perfect square");
+        }
+        else{
+            System.out.println(" not an perfect square");
+        }
+
+    }
+
+}
+````
+
+## 08.Count yhe number of digits in a number
+
+````java[]
+
+import java.util.Scanner;
+public class perfectsquare {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int num = in.nextInt();
+        double sqrt = Math.sqrt(num);
+        if(sqrt == (int) sqrt) {
+            System.out.println(num + " is a perfect square");
+        }
+        else{
+            System.out.println(" not an perfect square");
+        }
+
+    }
+
+}
+````
+
+## 09.To check whether  a string is a palindrome
+
+````java[]
+
+public  class palindrome {
+    public static void main(String[] args) {
+        Scanner in= new Scanner(System.in);
+        System.out.println("Enter the string");
+        String str = in.nextLine();
+        String reversed = "";
+        for(int i = str.length()-1;i>=0;i--){
+            reversed += str.length();
+
+        }
+        if(str.equalsIgnoreCase(reversed)){
+            System.out.println("It is a  palindrome");
+        }
+        else{
+            System.out.println("Not a palindrome");
+        }
+    }
+    }
+````
+
+## 10.Check if the string is an anagram
+
+````java[]
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class anagram {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first string: ");
+        String str1 = sc.nextLine();
+
+        System.out.print("Enter second string: ");
+        String str2 = sc.nextLine();
+
+        // Convert to lowercase and remove spaces
+        str1 = str1.replaceAll(" ", "").toLowerCase();
+        str2 = str2.replaceAll(" ", "").toLowerCase();
+
+        if (str1.length() != str2.length()) {
+            System.out.println("Not anagrams");
+        } else {
+            char[] ch1 = str1.toCharArray();
+            char[] ch2 = str2.toCharArray();
+
+            Arrays.sort(ch1);
+            Arrays.sort(ch2);
+
+            if (Arrays.equals(ch1, ch2)) {
+                System.out.println("Anagrams");
+            } else {
+                System.out.println("Not anagrams");
+            }
+        }
+
+        sc.close();
+    }
+}
+````
+
+
 
    
