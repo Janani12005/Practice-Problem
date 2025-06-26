@@ -158,32 +158,30 @@ public class Main {
 ````java[]
 
 import java.util.*;
-public class Main {
-    public static void main(String[] args) {
-        int number = 121; 
-        if (isPalindrome(number)) {
-            System.out.println(number + " is a palindrome.");
-        } else {
-            System.out.println(number + " is not a palindrome.");
-        }
-    }
-
-    public static boolean isPalindrome(int num) {
-        int original = num;
+public class Main{
+    public static void main(String[]args){
+        Scanner in = new Scanner(System.in);
         int reversed = 0;
-        int remainder;
-
-        // Reverse the digits of the number
-        while (num != 0) {
-            remainder = num % 10;
-            reversed = reversed * 10 + remainder;
-            num /= 10;
+        int num= 111;
+        int temp=num;
+        while(num>0){
+            int b=num%10;
+            reversed = reversed *10+ b;
+            num = num/10;
         }
-
-        // Check if the original number is equal to the reversed number
-        return original == reversed;
+        
+        if(temp==reversed){
+        System.out.println(" it is palindrome");
+    }
+        else{
+        System.out.println(" not an palindrome");
+    }
     }
 }
+
+
+
+       
 ````
 
 ## 09.Check whether a character is a vowel or consonant
