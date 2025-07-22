@@ -237,6 +237,45 @@ public class Solution {
 
 ````
 
+## 10. Program to reverse a string except the special characters
+
+````java[]
+
+import java.util.Scanner;
+
+public class ReverseExceptSpecial {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        sc.close();
+
+        char[] arr = s.toCharArray();
+        int left = 0, right = arr.length - 1;
+
+        while (left < right) {
+            // Move left pointer if current char is special
+            if (!Character.isLetterOrDigit(arr[left])) {
+                left++;
+            }
+            // Move right pointer if current char is special
+            else if (!Character.isLetterOrDigit(arr[right])) {
+                right--;
+            }
+            // Swap letters/digits
+            else {
+                char temp = arr[left];
+                arr[left] = arr[right];
+                arr[right] = temp;
+                left++;
+                right--;
+            }
+        }
+
+        System.out.println(new String(arr));
+    }
+}
+````
+
 
 
 
