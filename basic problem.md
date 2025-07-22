@@ -373,6 +373,34 @@ public class usingCharacter {
 }
 ````
 
+## 10.String Buffer
+
+````java[]
+
+package Example1;
+import java.util.Scanner;
+
+public class Example1 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		StringBuffer sb  =new StringBuffer("hello");
+		//sb.append("hi");
+		//sb.charAt(1);
+		//sb.deleteCharAt(3);
+		//sb.insert(0, "hello");
+		//sb.length();
+		//sb.reverse();
+		//String str = sb.toString();
+		sb.setCharAt(1, 't');
+		System.out.print(sb);
+	}
+	   
+
+}
+
+````
+
 
 
  
